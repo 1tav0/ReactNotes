@@ -2,12 +2,21 @@ import React, { useState } from 'react'
 //Object state instead of multiple smaller ones 
 const ObjectStateAgain = () => {
 
-  const [firsName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [address, setAddress] = useState("");
-  const [zipcode, setZipcode] = useState("");
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    address: "",
+    zipcode: ""
+  });
+
+  const handleChange = e => {
+    setForm({
+      ...form, //to get all the contents of that form 
+      firstName: e.target.value
+    })
+  }
   return (
     <form action=""
       style={{
@@ -23,36 +32,42 @@ const ObjectStateAgain = () => {
         name="firsName"
         placeholder='first name'
         className='px-1 py-2'
+        onChange={handleChange}
       />
       <input
         type="text"
         name="lastName"
         placeholder='last name'
         className='px-1 py-2'
+        onChange={handleChange}
       />
       <input
         type="text"
         name="email"
         placeholder='email'
         className='px-1 py-2'
+        onChange={handleChange}
       />
       <input
         type="text"
         name="password"
         placeholder='password'
         className='px-1 py-2'
+        onChange={handleChange}
       />
       <input
         type="text"
         name="address"
         placeholder='address'
         className='px-1 py-2'
+        onChange={handleChange}
       />
       <input
         type="text"
-        name="zipCode"
+        name="zipcode"
         placeholder='zip code'
         className='px-1 py-2'
+        onChange={handleChange}
       />
       <button>
         Submit
