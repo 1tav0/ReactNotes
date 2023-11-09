@@ -11,6 +11,7 @@ const ObjectState = () => {
   console.log(user);
   const handleChange = (e) => {
     setUser({
+      ...user,
       name: e.target.value
     });
   }
