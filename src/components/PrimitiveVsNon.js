@@ -2,10 +2,16 @@ import React, { useState } from 'react'
 
 const PrimitiveVsNon = () => {
   console.log("Component Rendering...");
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState({
+    number: 100,
+    totalPrice: true
+  });
   
   const handleClick = () => {
-    setPrice(0);
+    setPrice({
+      number: 100,
+      totalPrice: true
+    });
   }
 
   return (
