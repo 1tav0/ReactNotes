@@ -6,13 +6,9 @@ const StateClosure = () => {
   useEffect(() => {
     const i = setInterval(() => {
       console.log("Interval function is running...");
-      setCount(count + 1);
+      setCount(prev => prev + 1);
     }, 1000);
-    //useEffect clean up function from prev useEffect run
-    return () => {
-      clearInterval(i);
-    }
-  }, [count])
+  }, [])
 
   return (
     <p>Count is: {count}</p>
