@@ -12,9 +12,10 @@ const ObjectStateAgain = () => {
   });
 
   const handleChange = e => {
+    //can also the prev updated function we saw before and spread that
     setForm({
       ...form, //to get all the contents of that form 
-      firstName: e.target.value
+      [e.target.name]: e.target.value
     })
   }
   return (
