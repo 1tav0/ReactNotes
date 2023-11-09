@@ -5,10 +5,11 @@ import ObjectState from './components/ObjectState';
 import ObjectStateAgain from './components/ObjectStateAgain';
 import StateProps from './components/StateProps';
 import PrimitiveVsNon from './components/PrimitiveVsNon'
+import InitializingState from './components/InitializingState';
 function App() {
   return (
     <div className="App">
-      <PrimitiveVsNon />
+      <InitializingState />
     </div>
   );
 }
