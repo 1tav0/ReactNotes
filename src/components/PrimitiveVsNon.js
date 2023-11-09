@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const PrimitiveVsNon = () => {
   console.log("Component Rendering...");
@@ -14,6 +14,10 @@ const PrimitiveVsNon = () => {
     });
   }
 
+  //this is dangerous when we depend on an object because it is non-primitive 
+  useEffect(() => {
+    
+  },[price.number]) //now the useEffect will render with a primitive type
   return (
     <button
       onClick={handleClick}
