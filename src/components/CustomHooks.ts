@@ -1,4 +1,10 @@
-//we're using useState so we need to make this a client 
+//we're using useState so we need to make this a client
+//to be able to use the hooks bc in Next.js by default the app files are server side components
+// useState() client side component
+// useEffect() client side component
+// window.alert() browser side object
+// localstorage.getItem("test") also browser side
+// we must use client to make them client side component or import to a file that already has this header 
 "use Client"
 
 import React, { useEffect, useState } from "react";
