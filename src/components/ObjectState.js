@@ -10,10 +10,12 @@ const ObjectState = () => {
 
   console.log(user);
   const handleChange = (e) => {
-    setUser(prev => ({
-      ...prev,
-      name: e.target.value
-    }));
+    setUser(prev => {
+      return {
+        ...prev,
+        name: e.target.value
+      }
+    });
   }
 
   return (
