@@ -5,16 +5,17 @@ const PRICE_PER_ITEM = 5;
 const StateProps = () => {
 
   const [quantity, setQuantity] = useState(1);
-  //beginner way to do it
-  const [totalPrice, setTotalPrice] = useState(0);
+  //pro way derived from 1 useState
+  const totalPrice = quantity * PRICE_PER_ITEM;
   const handleClick = () => {
     setQuantity(quantity + 1);
   }
 
-  //we want to run this function every time the quantity changes
-  useEffect(() => {
-    setTotalPrice(quantity * PRICE_PER_ITEM);
-  },[quantity])
+  //another example 
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const fullName = firstName + lastName;
+
   return (
     <div>
       <button
